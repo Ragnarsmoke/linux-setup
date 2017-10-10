@@ -6,6 +6,9 @@
 "pamixer --decrease 5"
    XF86AudioLowerVolume
 
+"xfce4-screenshooter"
+    Mod2+Print
+
 # Terminal
 "urxvt"
     control+alt+t
