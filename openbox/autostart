@@ -10,5 +10,8 @@ nvidia-fix
 # Xbindkeys
 xbindkeys &
 
+# Nitrogen
+nitrogen --restore
+
 # Tint 2
 tint2 &
