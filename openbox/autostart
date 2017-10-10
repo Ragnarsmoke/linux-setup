@@ -10,8 +10,14 @@ nvidia-fix
 # Xbindkeys
 xbindkeys &
 
+# Layout switcher
+setxkbdmap us,se -option grp:rctrl_switch
+
 # Nitrogen
 nitrogen --restore
 
 # Tint 2
 tint2 &
+
+# Compton
+compton -bcC

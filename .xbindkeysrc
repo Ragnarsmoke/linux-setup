@@ -14,7 +14,7 @@
     control+alt+t
 
 # Keystroke launcher
-"rofi-custom"
+"rofi -combi-modi window,drun -show drun"
     control+alt+r
 
 # Firefox

@@ -4,18 +4,13 @@
 
 # ID 1
 rounded = 0
-border_width = 0
-background_color = #222d32 100
+border_width = 1
+background_color = #1d1f21 100
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #425761 100
-
-# ID 3
-rounded = 0
-border_width = 0
-background_color = #cc6666 100
+background_color = #222d32 100
 
 # Panel
 panel_monitor = all
@@ -76,12 +71,12 @@ systray_icon_size = 16
 systray_icon_asb = 100 0 0
 
 # Clock
-time1_format = %Y/%m/%d %H:%M
+time1_format = %H:%M
 time1_font = Droid Sans 9
 clock_font_color = #FFFFFF 100
 clock_tooltip = 
 clock_padding = 10 6
-clock_background_id = 1
+clock_background_id = 2
 clock_lclick_command = gsimplecal
 time1_timezone = 
 time2_timezone = 

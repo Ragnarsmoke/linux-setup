@@ -315,14 +315,31 @@
         <direction>down</direction>
       </action>
     </keybind>
+    <keybind key="A-F9">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="A-F10">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="W-c">
+      <action name="MoveResizeTo">
+          <x>center</x>
+          <y>center</y>
+      </action>
+    </keybind>
+    <keybind key="A-grave">
+      <action name="execute">
+          <execute>wmctrl-switch-by-application</execute>
+      </action>
+    </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Konqueror</name>
+          <name>Thunar</name>
         </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>thunar</command>
       </action>
     </keybind>
   </keyboard>
@@ -396,9 +413,6 @@
     <context name="Titlebar">
       <mousebind button="Left" action="Drag">
         <action name="Move"/>
-      </mousebind>
-      <mousebind button="A-F10" action="Click">
-        <action name="ToggleMaximize"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">

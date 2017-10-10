@@ -129,7 +129,7 @@ nnoremap <F3> :set hlsearch!<CR>
 """ PLUGIN CONFIGURATION
 
 "" Closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.twig,*.md"
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.twig,*.md,*.xml"
 
 "" YouCompleteMe
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
