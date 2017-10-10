@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+# GTK Theme
+export GTK2_RC_FILES=/usr/share/themes/Adapta/gtk-2.0/gtkrc
+export GTK_THEME=Adapta
+
+# Fix nvidia display
+nvidia-fix
+
+# Xbindkeys
+xbindkeys &
+
+# Tint 2
+tint2 &

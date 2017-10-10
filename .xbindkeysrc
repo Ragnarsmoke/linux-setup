@@ -1,0 +1,23 @@
+# Increase volume
+"pamixer --increase 5"
+   XF86AudioRaiseVolume
+
+# Decrease volume
+"pamixer --decrease 5"
+   XF86AudioLowerVolume
+
+# Terminal
+"urxvt"
+    control+alt+t
+
+# Keystroke launcher
+"rofi-custom"
+    control+alt+r
+
+# Firefox
+"firefox"
+    control+alt+w
+
+# Thunderbird
+"thunderbird"
+    control+alt+m

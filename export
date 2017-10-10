@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+# Tmux
+cp ./.tmux.conf ~/.tmux.conf 
+cp ./.tmux-theme.conf ~/.tmux-theme.conf
+
+# Vim
+cp ./.vimrc ~/.vimrc
+
+# Keybinds
+cp ./.xbindkeysrc ~/.xbindkeysrc
+
+# UXvrt Terminal
+cp ./.Xdefaults ~/.Xdefaults
+
+# ZSH
+cp ./.zshrc ~/.zshrc
+
+# Rofi
+sudo cp ./rofi-custom /usr/local/bin/rofi-custom 
+
+# Openbox
+cp ./openbox/rc.xml ~/.config/openbox/rc.xml
+cp ./openbox/autostart ~/.config/openbox/autostart
