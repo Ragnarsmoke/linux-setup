@@ -42,6 +42,10 @@ Plugin 'wikitopian/hardmode'
 Plugin 'terryma/vim-expand-region'
 " PHP Completion
 Plugin 'shawncplus/phpcomplete.vim'
+" Emacs-like command line movement
+Plugin 'houtsnip/vim-emacscommandline'
+" Fugitive git wrapper
+Plugin 'tpope/vim-fugitive'
 
 "" Theme plugins
 
@@ -68,6 +72,17 @@ if has("gui_running") || &term == "xterm-256color" || &term == "screen-256-color
 else
     " Use default color scheme
     colorscheme default
+endif
+
+if has("gui_running")
+    " Font
+    set guifont=Hack\ 9
+
+    " Disable graphical scrollbar
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
 endif
 
 """ CONFIGURATION
@@ -107,6 +122,13 @@ set hlsearch
 nnoremap j gj
 nnoremap k gk
 
+" Persistent undo
+try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
+    set undofile
+catch
+endtry
+"
 "" KEYBINDINGS
 
 " File indentation
@@ -129,7 +151,7 @@ nnoremap <F3> :set hlsearch!<CR>
 """ PLUGIN CONFIGURATION
 
 "" Closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.twig,*.md,*.xml"
+let g:closetag_filenames = "*.htm,*.html,*.xhtml,*.phtml,*.twig,*.md,*.xml,*.php"
 
 "" YouCompleteMe
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']

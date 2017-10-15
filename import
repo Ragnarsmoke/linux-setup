@@ -16,9 +16,14 @@ cp ~/.Xresources .
 # ZSH
 cp ~/.zshrc .
 
+# Ranger
+cp ~/.config/ranger/commands.py ./ranger/commands.py
+
 # Openbox
-cp ~/.config/openbox/rc.xml ./openbox
-cp ~/.config/openbox/autostart ./openbox
+cp ~/.config/openbox/rc.xml ./openbox/rc.xml
+cp ~/.config/openbox/autostart ./openbox/autostart
+cp ~/.config/openbox/environment ./openbox/environment
+cp ~/.config/openbox/menu.xml ./openbox/menu.xml
 cp /usr/local/bin/wmctrl-switch-by-application ./openbox/wmctrl-switch-by-application
 
 # Tint 2

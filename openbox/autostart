@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-# GTK Theme
-export GTK2_RC_FILES=/usr/share/themes/Adapta/gtk-2.0/gtkrc
-export GTK_THEME=Adapta
-
 # Fix nvidia display
 nvidia-fix
 
@@ -11,7 +7,7 @@ nvidia-fix
 xbindkeys &
 
 # Layout switcher
-setxkbdmap us,se -option grp:rctrl_switch
+setxkbmap us,se -option grp:rctrl_switch
 
 # Nitrogen
 nitrogen --restore

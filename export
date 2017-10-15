@@ -16,9 +16,14 @@ cp ./.Xresources ~/.Xresources
 # ZSH
 cp ./.zshrc ~/.zshrc
 
+# Ranger
+cp ./ranger/commands.py ~/.config/ranger/commands.py
+
 # Openbox
 cp ./openbox/rc.xml ~/.config/openbox/rc.xml
 cp ./openbox/autostart ~/.config/openbox/autostart
+cp ./openbox/environment ~/.config/openbox/environment
+cp ./openbox/menu.xml ~/.config/openbox/menu.xml
 sudo cp ./openbox/wmctrl-switch-by-application /usr/local/bin
 sudo chmod +x /usr/local/bin/wmctrl-switch-by-application
 

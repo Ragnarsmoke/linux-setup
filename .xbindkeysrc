@@ -13,6 +13,10 @@
 "urxvt"
     control+alt+t
 
+# Ranger
+"urxvt -e ranger"
+    control+alt+e
+
 # Keystroke launcher
 "rofi -combi-modi window,drun -show drun"
     control+alt+r
