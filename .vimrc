@@ -46,6 +46,8 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'houtsnip/vim-emacscommandline'
 " Fugitive git wrapper
 Plugin 'tpope/vim-fugitive'
+" Tagbar outline
+Plugin 'majutsushi/tagbar'
 
 "" Theme plugins
 
@@ -59,6 +61,8 @@ Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
+
+set tags+=tags;
 
 """ THEME
 
@@ -111,6 +115,20 @@ cabbr <expr> %% expand('%:p:h')
 " Command bar
 set showcmd
 
+function! SelectIndent ()
+    let temp_var=indent(line("."))
+
+    while indent(line(".")-1) >= temp_var
+        exe "normal k"
+    endwhile
+
+    exe "normal V"
+
+    while indent(line(".")+1) >= temp_var
+        exe "normal j"
+    endwhile
+endfun
+
 " Tags file
 set tags=./tags,tags
 
@@ -128,8 +146,15 @@ try
     set undofile
 catch
 endtry
-"
+
 "" KEYBINDINGS
+
+" Select indentation block
+nmap <Space> :call SelectIndent()<CR>
+
+" Split vertically in a new buffer
+nnoremap <Leader>h :new<CR>
+nnoremap <Leader>v :vnew<CR>
 
 " File indentation
 map <F7> mzgg=G`z
@@ -137,7 +162,7 @@ nnoremap <F5> :!./reloadprod<CR><CR>
 
 " NERD Tree
 map <silent> <C-n> :NERDTreeFocus<CR>
-
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 " Visual search
 vnoremap // y/<C-R>"<CR>
 
@@ -179,6 +204,12 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|var|web|vendor$',
   \ 'file': '\v\.(exe|so|dll)$'
   \ }
+
+"" Office theme
+let g:office_dark_CursorLineNr = 'off'
+let g:office_light_CursorLineNr = 'off'
+let g:office_dark_LineNr = 'off'
+let g:office_light_LineNr = 'off'
 
 "" JavaScript
 let g:javascript_plugin_jsdoc = 1
