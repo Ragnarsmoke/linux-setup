@@ -30,5 +30,5 @@ cp /usr/local/bin/wmctrl-switch-by-application ./openbox/wmctrl-switch-by-applic
 cp /usr/share/tint2/numix-customized-emil.tint2rc .
 
 # Wallpaper
-cp /usr/share/backgrounds/wallpaper-emil.jpg .
+cp /usr/share/backgrounds/wallpaper-emil.jpg ./wallpaper.jpg
 cp ~/.config/nitrogen/bg-saved.cfg .
