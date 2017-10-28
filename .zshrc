@@ -8,6 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 export ZSH_THEME="blinks"
+
 export TERM="xterm-256color"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -85,4 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias .="source"
+alias so="source"
 alias psyu="sudo pacman -Syu --noconfirm"
+alias wine32='env WINEARCH=win32 WINEPREFIX="$HOME/.wine32" wine'

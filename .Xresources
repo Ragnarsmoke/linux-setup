@@ -8,6 +8,7 @@ Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
 
+URxvt.backend: xrender
 URxvt.letterSpace: -1
 URxvt.font: xft:Hack:size=9
 URxvt.scrollBar: false

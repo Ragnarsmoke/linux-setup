@@ -109,6 +109,14 @@
       </startupnotify>
     </action>
   </item>
+  <item label="VLC">
+    <action name="Execute">
+      <command>vlc</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="MPlayer">
     <action name="Execute">
       <command>gmplayer</command>
@@ -124,6 +132,14 @@
   <item label="Thunar">
     <action name="Execute">
       <command>Thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Ranger">
+    <action name="Execute">
+      <command>ranger</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
