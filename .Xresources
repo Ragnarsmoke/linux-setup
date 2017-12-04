@@ -13,6 +13,9 @@ URxvt.letterSpace: -1
 URxvt.font: xft:Hack:size=9
 URxvt.scrollBar: false
 URxvt.geometry: 120x32
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
 
 |--------------|
 | Rofi setting |

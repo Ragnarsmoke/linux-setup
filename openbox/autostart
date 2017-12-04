@@ -1,7 +1,11 @@
 #!/usr/bin/bash
 
+#####################
+#    Base setup     #
+#####################
+
 # Fix nvidia display
-nvidia-fix
+nvidia-fix &
 
 # Xbindkeys
 xbindkeys &
@@ -10,10 +14,18 @@ xbindkeys &
 setxkbmap us,se -option grp:rctrl_switch
 
 # Nitrogen
-nitrogen --restore
+nitrogen --restore &
 
 # Tint 2
 tint2 &
 
 # Compton
-compton -bcC
+compton -bcC &
+
+#####################
+# Startup programs  #
+#####################
+
+steam &
+spotify &
+pulseeffects &

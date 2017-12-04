@@ -90,3 +90,9 @@ alias .="source"
 alias so="source"
 alias psyu="sudo pacman -Syu --noconfirm"
 alias wine32='env WINEARCH=win32 WINEPREFIX="$HOME/.wine32" wine'
+
+# Named directories
+hash -d hd1="/media/hd1"
+hash -d win="/media/win"
+hash -d pfiles="/media/hd1/Program Files"
+hash -d pfilesx86="/media/hd1/Program Files (x86)"
