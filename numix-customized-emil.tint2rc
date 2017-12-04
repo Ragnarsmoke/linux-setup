@@ -5,12 +5,12 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #222d32 100
+background_color = #222d32 50
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #425761 100
+background_color = #425761 50
 
 # ID 3
 rounded = 0

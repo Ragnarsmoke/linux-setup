@@ -21,6 +21,7 @@ URxvt.perl-ext-common: default,clipboard
 | Rofi setting |
 |--------------|
 
+rofi.terminal: urxvt
 rofi.font: hack 9
 rofi.color-enabled: true
 rofi.color-window: #1d1f21, #1d1f21, #1d1f21
