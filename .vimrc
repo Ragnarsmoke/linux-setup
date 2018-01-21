@@ -173,6 +173,8 @@ nmap <BS> O<Esc>
 " Reset search
 nnoremap <F3> :set hlsearch!<CR>
 
+nnoremap <Leader>r :!ant<CR>
+
 """ PLUGIN CONFIGURATION
 
 "" Closetag

@@ -33,3 +33,7 @@ sudo cp ./tint2rc /usr/share/tint2/numix-customized-emil.tint2rc
 # Wallpaper
 sudo cp ./wallpaper.jpg /usr/share/backgrounds/wallpaper-emil.jpg
 cp ./bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
+
+# Qutebrowser
+cp ./qutebrowser/config.py ~/.config/qutebrowser/config.py
+cp ./qutebrowser/config.yml ~/.config/qutebrowser/config.yml

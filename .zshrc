@@ -88,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias .="source"
 alias so="source"
+alias v="vim"
 alias psyu="sudo pacman -Syu --noconfirm"
 alias wine32='env WINEARCH=win32 WINEPREFIX="$HOME/.wine32" wine'
 

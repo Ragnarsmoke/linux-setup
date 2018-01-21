@@ -1,11 +1,14 @@
-# Increase volume
+# Volume control
 "pamixer --increase 5"
    XF86AudioRaiseVolume
 
-# Decrease volume
 "pamixer --decrease 5"
    XF86AudioLowerVolume
 
+"pamixer -t"
+    Mod2+Mod4+t
+
+# Screenshots
 "xfce4-screenshooter"
     Mod2+Print
 
