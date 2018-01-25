@@ -16,7 +16,7 @@ repo_package_list=(
     'pulseaudio' 'pulseaudio-alsa' 'alsa-utils'
 
     # Utilities
-    'wmctrl' 'pamixer' 'rofi'
+    'wmctrl' 'pamixer' 'rofi' 'playerctl'
 
     # Graphical
     'xorg-server' 'lightdm' 'lightdm-gtk-greeter'

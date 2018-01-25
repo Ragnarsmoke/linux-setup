@@ -1,4 +1,0 @@
-#!/bin/sh
-umount /dev/$1
-ntfsfix /dev/$1
-mount /dev/$1
