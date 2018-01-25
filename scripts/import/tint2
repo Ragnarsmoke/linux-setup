@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+echo "Copying tint2rc..."
+
+sudo cp /usr/share/tint2/numix-customized-emil.tint2rc ./contents/usr/share/tint2/numix-customized-emil.tint2rc 

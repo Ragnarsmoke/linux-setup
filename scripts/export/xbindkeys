@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+echo "Copying xbindkeysrc..."
+
+cp ./contents/home/.xbindkeysrc $HOME/.xbindkeysrc

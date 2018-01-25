@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+echo "Copying qutebrowser config..."
+
+mkdir -p $HOME/.config/qutebrowser
+cp -r ./contents/home/.config/qutebrowser/* $HOME/.config/qutebrowser
+
+
+if [ ! $shbin == "$(which zsh)" ]; then
+    read -rp "Set qutebrowser as default web browser? [y/N]? " response
+fi

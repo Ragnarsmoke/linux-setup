@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+echo "Copying scripts and bins..."
+
+cd ./contents/usr/local/bin
+
+for f in *; do
+    cp "/usr/local/bin/$f" "$f"
+done

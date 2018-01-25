@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+echo "Copying vimrc..."
+
+cp ./contents/home/.vimrc $HOME/.vimrc
+
+mkdir -p $HOME/.vim/bundle
+cd $HOME/.vim/bundle
+
+if [ ! -d "Vundle.vim" ]; then
+    echo "Installing Vundle..."
+    git clone https://github.com/VundleVim/Vundle.vim
+fi

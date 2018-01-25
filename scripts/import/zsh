@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+echo "Copying zshrc..."
+cp $HOME/.zshrc ./contents/home/.zshrc

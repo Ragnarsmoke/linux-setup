@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+echo "Copying qutebrowser config..."
+
+cd ./contents/home/.config/qutebrowser
+
+for f in *; do
+    cp "$HOME/.config/qutebrowser/$f" "$f"
+done

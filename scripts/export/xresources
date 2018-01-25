@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+echo "Copying Xresources..."
+
+cp ./contents/home/.Xresources $HOME/.Xresources

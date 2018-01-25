@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+echo "Copying scripts and bins..."
+
+sudo cp -r ./contents/usr/local/bin/* /usr/local/bin

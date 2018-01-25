@@ -19,3 +19,4 @@
             --enable-luainterp=yes \
 
 sudo make && sudo make install
+sudo rm -rf ./src/objects

@@ -10,9 +10,6 @@ nvidia-fix &
 # Xbindkeys
 xbindkeys &
 
-# Layout switcher
-setxkbmap us,se -option grp:rctrl_switch
-
 # Nitrogen
 nitrogen --restore &
 

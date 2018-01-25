@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+echo "Copying background file..."
+sudo cp /usr/share/backgrounds/wallpaper-emil.jpg ./contents/usr/share/backgrounds/wallpaper-emil.jpg
+
+echo "Copying nitrogen settings..."
+cp $HOME/.config/nitrogen/* ./contents/home/.config/nitrogen

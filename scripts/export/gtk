@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+echo "Copying gtkrc..."
+
+sudo cp ./contents/home/.gtkrc-2.0 $HOME/.gtkrc-2.0
