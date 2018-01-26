@@ -4,8 +4,8 @@
 #    Base setup     #
 #####################
 
-# Fix nvidia display
-nvidia-fix &
+# Xcompmgr
+xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 
 # Xbindkeys
 xbindkeys &
@@ -16,8 +16,11 @@ nitrogen --restore &
 # Tint 2
 tint2 &
 
-# Compton
-compton -bcC &
+# Conky
+conky -d
+
+# PulseEffects
+pulseeffects --gapplication-service
 
 #####################
 # Startup programs  #
@@ -25,4 +28,3 @@ compton -bcC &
 
 steam &
 spotify &
-pulseeffects &

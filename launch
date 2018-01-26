@@ -8,45 +8,97 @@ repo_package_list=(
     'reflector'
 
     # Core + Interpreters
-    'zsh' 'python' 'perl' 'lua' 'ruby'
-    'jre7-openjdk' 'jdk7-openjdk' 'jre8-openjdk' 'jdk8-openjdk' 'jre9-openjdk' 'jdk9-openjdk'
-    'sudo' 'gksu' 'wget'
+    'zsh'
+    'python'
+    'perl'
+    'lua'
+    'ruby'
+    'sudo'
+    'gksu'
+    'wget'
+    'openssh'
+    'sshfs'
+    'dosfstools'
+    'ntfs-3g'
+    'parted'
 
-    # Drivers
-    'pulseaudio' 'pulseaudio-alsa' 'alsa-utils'
+    # Java
+    'jre7-openjdk'
+    'jdk7-openjdk'
+    'jre8-openjdk'
+    'jdk8-openjdk'
+    'jre9-openjdk'
+    'jdk9-openjdk'
 
-    # Utilities
-    'wmctrl' 'pamixer' 'rofi' 'playerctl'
+    # Audio
+    'pulseaudio'
+    'pulseaudio-alsa'
 
     # Graphical
-    'xorg-server' 'lightdm' 'lightdm-gtk-greeter'
-    'openbox' 'nitrogen' 'tint2' 'compton'
-    'qt4' 'gtk2' 'gtk3'
+    'xorg-server'
+    'qt4'
+    'gtk2'
+    'gtk3'
+    'lightdm'
+    'lightdm-gtk-greeter'
+    'openbox'
+    'nitrogen'
+    'tint2'
+    'compton'
+    'conky'
 
     # Utilities
-    'obconf' 'lxappearance' 'xfce4-screenshooter'
-    'htop'
+    'wmctrl'
+    'pamixer'
+    'rofi'
+    'playerctl'
+    'xbindkeys'
+    'xorg-xprop'
+    'xorg-xdpyinfo'
+    'xsel'
+
+    # Utility programs
+    'obconf'
+    'lxappearance'
+    'xfce4-screenshooter'
+    'htop' 
+    'p7zip'
+    'xorg-xinput'
 
     # Terminals
-    'xterm' 'rxvt-unicode' 'tmux'
+    'xterm'
+    'rxvt-unicode'
 
     # Editors
-    'emacs' 'leafpad' 'retext'
+    'emacs'
+    'leafpad'
+    'retext'
 
     # Media and applications
-    'steam' 'vlc' 'eog' 'deluge'
-    'thunar' 'gimp' 'inkscape'
-    'teamspeak3' 'evince'
+    'steam'
+    'vlc'
+    'eog'
+    'deluge'
+    'thunar'
+    'gimp'
+    'inkscape'
+    'teamspeak3'
+    'evince'
 
     # Themes and fonts
     'adapta-gtk-theme'
-    'terminus-font' 'ttf-hack'
-    'ttf-dejavu' 'ttf-droid' 'ttf-roboto'
-    'noto-fonts' 'ttf-liberation' 'ttf-ubuntu-font-family'
-    'ttf-freefont'
+    'terminus-font' 'ttf-hack' 'ttf-dejavu' 'ttf-droid' 'ttf-roboto' 'noto-fonts' 'ttf-liberation' 'ttf-ubuntu-font-family' 'ttf-freefont'
+
+    # Browsers + Mail clients
+    'firefox'
+    'chromium'
+    'qutebrowser'
+    'thunderbird'
 
     # Wine
     'winetricks'
+    'wine-mono'
+    'wine_gecko'
 )
 
 aur_package_list=(
@@ -56,10 +108,13 @@ aur_package_list=(
     'ttf-ms-fonts' 'ttf-vista-fonts'
 
     # Media and applications
-    'spotify' 'pulseeffects' 'discord'
+    'spotify'
+    'pulseeffects'
+    'discord'
+    'p7zip-gui'
 
     # Wine
-    'wine-gaming-nine'
+    # 'wine-gaming-nine'
 )
 
 package_exists() {
@@ -163,6 +218,17 @@ install_vim() {
     fi
 }
 
+install_pacaur() {
+    if ! package_exists pacaur; then
+        echo "> Installing pacaur"
+        gpg --recv-keys 487EACC08557AD082088DABA1EB2638FF56C0C53
+        pacman_install expac
+        pacman_install yajl
+        aur_install cower
+        aur_install pacaur
+    fi
+}
+
 install_packages() {
     echo "Installing packages..."
     pacman_install curl
@@ -186,7 +252,7 @@ install_packages() {
         pacman_install yajl
         aur_install cower
         aur_install pacaur
-	fi
+    fi
 
     # Vim
     install_vim
@@ -246,6 +312,8 @@ import_setup() {
         fi
     done
 }
+
+install_pacaur
 
 echo "What do you want to do?"
 select choice in "Install packages" "Export setup" "Import setup"

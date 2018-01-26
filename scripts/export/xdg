@@ -118,3 +118,8 @@ xdg-mime default libreoffice-calc.desktop application/vnd.ms-excel
 
 xdg-mime default libreoffice-impress.desktop application/vnd.ms-powerpoint
 xdg-mime default libreoffice-impress.desktop application/vnd.openxmlformats-officedocument.presentationml.presentation
+
+# Archives
+xdg-mime default 7zFM.desktop application/zip
+xdg-mime default 7zFM.desktop application/x-rar-compressed
+xdg-mime default 7zFM.desktop application/x-7z-compressed
