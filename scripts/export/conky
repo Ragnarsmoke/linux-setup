@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+echo "Copying conky.conf..."
+
+cp ./contents/home/.config/conky/conky.conf $HOME/.config/conky/conky.conf
+conky -c $HOME/.config/conky/conky.conf

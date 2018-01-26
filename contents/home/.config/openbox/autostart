@@ -20,7 +20,7 @@ tint2 &
 conky -d
 
 # PulseEffects
-pulseeffects --gapplication-service
+pulseeffects --gapplication-service &
 
 #####################
 # Startup programs  #

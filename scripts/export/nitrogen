@@ -6,5 +6,5 @@ sudo cp ./contents/usr/share/backgrounds/wallpaper-emil.jpg /usr/share/backgroun
 
 echo "Copying nitrogen settings..."
 
-mkdir -p ~/.config/nitrogen
+mkdir -p $HOME/.config/nitrogen
 cp -r ./contents/home/.config/nitrogen/* $HOME/.config/nitrogen

@@ -44,8 +44,7 @@ repo_package_list=(
     'openbox'
     'nitrogen'
     'tint2'
-    'compton'
-    'conky'
+    'xcompmgr'
 
     # Utilities
     'wmctrl'
@@ -102,6 +101,9 @@ repo_package_list=(
 )
 
 aur_package_list=(
+    # Graphical
+    'conky-lua'
+
     # Themes and fonts
     'adwaita-qt4' 'adwaita-qt5'
     'la-capitaine-icon-theme'
