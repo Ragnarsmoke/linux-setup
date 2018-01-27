@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+echo "Copying ntp settings..."
+
+sudo cp ./contents/etc/ntp.conf /etc/ntp.conf
+
+read -rp "Enable ntpd service [y/N]? " response
+
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+    sudo systemctl enable ntpd.service
+fi

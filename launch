@@ -22,6 +22,7 @@ repo_package_list=(
     'ntfs-3g'
     'parted'
     'acpi'
+    'ntp'
 
     # Java
     'jre7-openjdk'
@@ -34,6 +35,7 @@ repo_package_list=(
     # Audio
     'pulseaudio'
     'pulseaudio-alsa'
+    'alsa-utils'
 
     # Graphical
     'xorg-server'
@@ -68,6 +70,7 @@ repo_package_list=(
     # Terminals
     'xterm'
     'rxvt-unicode'
+    'tmux'
 
     # Editors
     'emacs'
@@ -84,6 +87,7 @@ repo_package_list=(
     'inkscape'
     'teamspeak3'
     'evince'
+    'audacity'
 
     # Themes and fonts
     'adapta-gtk-theme'
@@ -96,10 +100,10 @@ repo_package_list=(
     'thunderbird'
 
     # Wine
-    'wine' # Replace with wine-gaming-nine (AUR)
-    'winetricks'
-    'wine-mono'
-    'wine_gecko'
+    # 'wine' # Replace with wine-gaming-nine (AUR)
+    # 'winetricks'
+    # 'wine-mono'
+    # 'wine_gecko'
 )
 
 aur_package_list=(
@@ -121,9 +125,21 @@ aur_package_list=(
     # 'wine-gaming-nine'
 )
 
+gpgkeys=(
+    '487EACC08557AD082088DABA1EB2638FF56C0C53'
+    '11E521D646982372EB577A1F8F0871F202119294'
+)
+
 package_exists() {
     pacman -Q "$1" > /dev/null 2>&1
     return "$?"
+}
+
+install_keys() {
+    echo "> Recieving GPG keys"
+    for key in "${gpgkeys[@]}"; do
+        gpg --recv-keys "$key"
+    done
 }
 
 pacman_install() {
@@ -225,7 +241,6 @@ install_vim() {
 install_pacaur() {
     if ! package_exists pacaur; then
         echo "> Installing pacaur"
-        gpg --recv-keys 487EACC08557AD082088DABA1EB2638FF56C0C53
         pacman_install expac
         pacman_install yajl
         aur_install cower
@@ -251,7 +266,6 @@ install_packages() {
     # Pacaur
     if ! package_exists pacaur; then
         echo "> Installing pacaur"
-        gpg --recv-keys 487EACC08557AD082088DABA1EB2638FF56C0C53
         pacman_install expac
         pacman_install yajl
         aur_install cower
@@ -317,12 +331,18 @@ import_setup() {
     done
 }
 
-install_pacaur
-
 echo "What do you want to do?"
-select choice in "Install packages" "Export setup" "Import setup"
+select choice in "Install GPG keys" "Install pacaur" "Install packages" "Export setup" "Import setup"
 do
     case "$choice" in
+        "Install GPG keys")
+            install_keys
+            break
+            ;;
+        "Install pacaur")
+            install_pacaur
+            break
+            ;;
         "Install packages")
             install_packages
             break
