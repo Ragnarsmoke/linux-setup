@@ -100,6 +100,7 @@ local function output_filesystems()
 end
 
 conky.text = interp([[
+
 ${color #{color_header}}${font #{font_header}}SYSTEM $hr
 
 ${color #{color_text2}}${font #{font_main}}System: ${color #{color_text1}}$sysname $kernel
