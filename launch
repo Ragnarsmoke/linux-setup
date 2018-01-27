@@ -21,6 +21,7 @@ repo_package_list=(
     'dosfstools'
     'ntfs-3g'
     'parted'
+    'acpi'
 
     # Java
     'jre7-openjdk'
@@ -86,7 +87,7 @@ repo_package_list=(
 
     # Themes and fonts
     'adapta-gtk-theme'
-    'terminus-font' 'ttf-hack' 'ttf-dejavu' 'ttf-droid' 'ttf-roboto' 'noto-fonts' 'ttf-liberation' 'ttf-ubuntu-font-family' 'ttf-freefont'
+    'terminus-font' 'ttf-hack' 'ttf-dejavu' 'noto-fonts' 'ttf-liberation' 'ttf-freefont'
 
     # Browsers + Mail clients
     'firefox'
@@ -95,6 +96,7 @@ repo_package_list=(
     'thunderbird'
 
     # Wine
+    'wine' # Replace with wine-gaming-nine (AUR)
     'winetricks'
     'wine-mono'
     'wine_gecko'
@@ -107,7 +109,7 @@ aur_package_list=(
     # Themes and fonts
     'adwaita-qt4' 'adwaita-qt5'
     'la-capitaine-icon-theme'
-    'ttf-ms-fonts' 'ttf-vista-fonts'
+    'ttf-ms-fonts' 'ttf-vista-fonts' 'ttf-google-fonts-git'
 
     # Media and applications
     'spotify'
@@ -115,7 +117,7 @@ aur_package_list=(
     'discord'
     'p7zip-gui'
 
-    # Wine
+    # Wine + Gallium 9 (Compile time from outer space, install manually)
     # 'wine-gaming-nine'
 )
 

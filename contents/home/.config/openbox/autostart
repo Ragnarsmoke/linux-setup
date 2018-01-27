@@ -17,7 +17,7 @@ nitrogen --restore &
 tint2 &
 
 # Conky
-conky -d
+conky -d -c $HOME/.config/conky/conky.lua &
 
 # PulseEffects
 pulseeffects --gapplication-service &
