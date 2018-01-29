@@ -88,6 +88,7 @@ repo_package_list=(
     'teamspeak3'
     'evince'
     'audacity'
+    'libreoffice'
 
     # Themes and fonts
     'adapta-gtk-theme'

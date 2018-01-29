@@ -1,12 +1,6 @@
 --[[
--- Conky configuration by Ragnarsmoke
+-- Conky configuration by Emil Bertilsson
 ]]
-
-local function interp (s, t)
-    return s:gsub('(#%b{})', function (w)
-        return t[w:sub(3, -2)] or w
-    end)
-end
 
 conky.config = {
     alignment = 'bottom_right',
@@ -21,6 +15,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
+    double_buffer = true,
     font = 'Anonymous Pro:size=9',
     gap_x = 10,
     gap_y = 0,
@@ -33,6 +28,7 @@ conky.config = {
     extra_newline = false,
     own_window = true,
     own_window_class = 'Conky',
+
     own_window_type = 'desktop',
     own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
     own_window_transparent = false,
@@ -65,6 +61,12 @@ local user_vars = {
     bar_height = 5,
     graph_height = 25
 }
+
+local function interp (s, t)
+    return s:gsub('(#%b{})', function (w)
+        return t[w:sub(3, -2)] or w
+    end)
+end
 
 local function output_wireless()
     if user_settings.show_wireless then
@@ -100,7 +102,6 @@ local function output_filesystems()
 end
 
 conky.text = interp([[
-
 ${color #{color_header}}${font #{font_header}}SYSTEM $hr
 
 ${color #{color_text2}}${font #{font_main}}System: ${color #{color_text1}}$sysname $kernel
@@ -112,13 +113,14 @@ ${color #{color_text2}}${font #{font_main}}Frequency: ${color #{color_text1}}${f
 ${color #{color_text2}}${font #{font_main}}Processes: ${color #{color_text1}}$processes ($running_processes running)
 ${color #{color_text2}}${font #{font_main}}Total usage: ${color #{color_text1}}${cpu cpu0}%
 ${color #{color_bar}}${cpubar #{bar_height}}
+
 ${color #{color_text2}}${font #{font_main}}CPU1: ${color #{color_text1}}${cpu cpu1}%              ${color #{color_text2}}${font #{font_main}}CPU2: ${color #{color_text1}}${cpu cpu2}%
 ${color #{color_graph}}${cpugraph cpu1 #{graph_height},145 FF0000 00FF00} ${color #{color_graph}}${cpugraph cpu2 #{graph_height},145 FF0000 00FF00}
-${color #{color_text2}}${font #{font_main}}Name                 PID   CPU%   MEM%
-${color #{color_text1}}${font #{font_main}}  ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
-${color #{color_text1}}${font #{font_main}}  ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
-${color #{color_text1}}${font #{font_main}}  ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
-${color #{color_text1}}${font #{font_main}}  ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+${color #{color_text2}}${font #{font_main}}Name                  PID     CPU%${alignr}MEM%
+${color #{color_text1}}${font #{font_main}}  ${top name 1}  ${top pid 1}   ${top cpu 1}${alignr}${top mem 1}
+${color #{color_text1}}${font #{font_main}}  ${top name 2}  ${top pid 2}   ${top cpu 2}${alignr}${top mem 2}
+${color #{color_text1}}${font #{font_main}}  ${top name 3}  ${top pid 3}   ${top cpu 3}${alignr}${top mem 3}
+${color #{color_text1}}${font #{font_main}}  ${top name 4}  ${top pid 4}   ${top cpu 4}${alignr}${top mem 4}
 
 ${color #{color_header}}${font #{font_header}}MEMORY $hr
 
