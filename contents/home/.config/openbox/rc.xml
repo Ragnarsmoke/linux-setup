@@ -30,7 +30,7 @@
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Primary</monitor>
+    <monitor>Active</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
@@ -323,13 +323,13 @@
     </keybind>
     <keybind key="W-c">
       <action name="MoveResizeTo">
-          <x>center</x>
-          <y>center</y>
+        <x>center</x>
+        <y>center</y>
       </action>
     </keybind>
     <keybind key="A-grave">
       <action name="execute">
-          <execute>wmctrl-switch-by-application</execute>
+        <execute>wmctrl-switch-by-application</execute>
       </action>
     </keybind>
     <!-- Keybindings for running applications -->

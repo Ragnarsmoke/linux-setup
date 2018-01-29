@@ -76,6 +76,7 @@ repo_package_list=(
     'emacs'
     'leafpad'
     'retext'
+    'eclipse-java'
 
     # Media and applications
     'steam'
