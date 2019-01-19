@@ -1,8 +1,0 @@
-#!/usr/bin/bash
-echo "Copying ranger config..."
-
-cd ./contents/home/.config/ranger
-
-for f in *; do
-    cp "$HOME/.config/ranger/$f" "$f"
-done

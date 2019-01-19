@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-echo "Copying QT configuration..."
-
-sudo cp $HOME/.config/Trolltech.conf ./contents/home/.config/Trolltech.conf

@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-ip link set wlo1 up
-iw dev wlo1 connect $1
-dhcpcd wlo1

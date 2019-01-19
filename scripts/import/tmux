@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-echo "Copying tmux configuration and theme..."
-
-cp $HOME/.tmux.conf ./contents/home/.tmux.conf
-cp $HOME/.tmux-theme.conf ./contents/home/.tmux-theme.conf

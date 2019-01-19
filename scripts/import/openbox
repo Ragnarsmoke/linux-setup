@@ -1,8 +1,0 @@
-#!/usr/bin/bash
-echo "Copying openbox config..."
-
-cd ./contents/home/.config/openbox
-
-for f in *; do
-    cp "$HOME/.config/openbox/$f" "$f"
-done

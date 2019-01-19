@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-echo "Copying conky.conf..."
-
-cp $HOME/.config/conky/conky.lua ./contents/home/.config/conky/conky.lua

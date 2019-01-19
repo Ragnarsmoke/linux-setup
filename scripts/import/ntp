@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-echo "Copying ntp settings..."
-
-sudo cp /etc/ntp.conf ./contents/etc/ntp.conf

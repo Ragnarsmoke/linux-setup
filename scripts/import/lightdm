@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-echo "Copying lightdm greeter config..."
-
-cp /etc/lightdm/lightdm-gtk-greeter.conf ./contents/etc/lightdm/lightdm-gtk-greeter.conf

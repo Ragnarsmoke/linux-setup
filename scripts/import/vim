@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-echo "Copying vimrc..."
-cp $HOME/.vimrc ./contents/home/.vimrc
